@@ -1,0 +1,57 @@
+diff --git a/node_modules/multiselect-react-dropdown/dist/index.js b/node_modules/multiselect-react-dropdown/dist/index.js
+index 01adc36..f85f8e8 100644
+--- a/node_modules/multiselect-react-dropdown/dist/index.js
++++ b/node_modules/multiselect-react-dropdown/dist/index.js
+@@ -2,7 +2,7 @@
+ 'use strict'
+ 
+ if (process.env.NODE_ENV === 'production') {
+-  module.exports = require('./multiselect-react-dropdown.cjs.production.min.js')
++  module.exports = require('./multiselect-react-dropdown.cjs.development.js')
+ } else {
+   module.exports = require('./multiselect-react-dropdown.cjs.development.js')
+ }
+diff --git a/node_modules/multiselect-react-dropdown/dist/multiselect-react-dropdown.cjs.development.js b/node_modules/multiselect-react-dropdown/dist/multiselect-react-dropdown.cjs.development.js
+index b07d43a..541b6a5 100644
+--- a/node_modules/multiselect-react-dropdown/dist/multiselect-react-dropdown.cjs.development.js
++++ b/node_modules/multiselect-react-dropdown/dist/multiselect-react-dropdown.cjs.development.js
+@@ -541,7 +541,7 @@ var Multiselect = /*#__PURE__*/function (_React$Component) {
+     value: function onSingleSelect(item) {
+       this.setState({
+         selectedValues: [item],
+-        toggleOptionsList: false
++        toggleOptionsList: true
+       });
+     }
+   }, {
+@@ -815,7 +815,7 @@ var Multiselect = /*#__PURE__*/function (_React$Component) {
+         className: "search-wrapper searchWrapper ".concat(singleSelect ? 'singleSelect' : ''),
+         ref: this.searchWrapper,
+         style: style['searchBox'],
+-        onClick: singleSelect ? this.toggelOptionList : function () {}
++        onClick: function () {}
+       }, this.renderSelectedList(), React__default.createElement("input", {
+         type: "text",
+         ref: this.searchBox,
+@@ -829,7 +829,7 @@ var Multiselect = /*#__PURE__*/function (_React$Component) {
+         onKeyDown: this.onArrowKeyNavigation,
+         style: style['inputField'],
+         autoComplete: "off",
+-        disabled: singleSelect || disable
++        
+       }), (singleSelect || showArrow) && React__default.createElement("img", {
+         src: DownArrow,
+         className: "icon_cancel icon_down_dir"
+diff --git a/node_modules/multiselect-react-dropdown/dist/multiselect-react-dropdown.esm.js b/node_modules/multiselect-react-dropdown/dist/multiselect-react-dropdown.esm.js
+index dae6b59..47328cd 100644
+--- a/node_modules/multiselect-react-dropdown/dist/multiselect-react-dropdown.esm.js
++++ b/node_modules/multiselect-react-dropdown/dist/multiselect-react-dropdown.esm.js
+@@ -822,7 +822,7 @@ var Multiselect = /*#__PURE__*/function (_React$Component) {
+         onKeyDown: this.onArrowKeyNavigation,
+         style: style['inputField'],
+         autoComplete: "off",
+-        disabled: singleSelect || disable
++        
+       }), (singleSelect || showArrow) && React__default.createElement("img", {
+         src: DownArrow,
+         className: "icon_cancel icon_down_dir"

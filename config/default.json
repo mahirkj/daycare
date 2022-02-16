@@ -1,0 +1,4 @@
+{
+    "mongoURI":"mongodb+srv://daycare:daycare1997@daycare.h8fep.mongodb.net/dayCare?retryWrites=true&w=majority",
+    "jwtSecret":"daycare007"
+}
